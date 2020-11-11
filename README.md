@@ -53,6 +53,7 @@ The `digits.py` file contains tunable parameters.
     }
     ```
 * This code is based on the authors [original Implementation](https://github.com/BeenKim/MMD-critic), consider leaving a :star: on their repository to support authors releasing their code.
+* Interpretable ML Book: [Chapter on Prototypes and Criticisms](https://christophm.github.io/interpretable-ml-book/proto.html)
 
 
 ## To-Do
