@@ -1,7 +1,7 @@
 # MMD-critic
 Work-in-progress implementation of 
 
-**Examples are not Enough, Learn to Criticize! Criticism for Interpretability. Been Kim, Rajiv Khanna, Sanmi Koyejo. NeurIPS 2016**
+**[Examples are not Enough, Learn to Criticize! Criticism for Interpretability. Been Kim, Rajiv Khanna, Sanmi Koyejo. NeurIPS 2016](https://proceedings.neurips.cc/paper/2016/hash/5680522b8e2bb01943234bce7bf84534-Abstract.html)**
 
 
 ## Setup
