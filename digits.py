@@ -81,6 +81,7 @@ if num_prototypes > 0:
     prototypes_sorted = prototypes[sorted_by_y_indices]
     prototype_labels = prototype_labels[sorted_by_y_indices]
     print('Done.', flush=True)
+    print(prototype_indices.sort()[0].tolist())
 
     # Visualize
     if make_plots:
@@ -110,6 +111,7 @@ if num_prototypes > 0:
         criticisms_sorted = criticisms[sorted_by_y_indices]
         criticism_labels = criticism_labels[sorted_by_y_indices]
         print('Done.', flush=True)
+        print(criticism_indices.sort()[0].tolist())
 
         # Visualize
         if make_plots:
@@ -126,3 +128,4 @@ if num_prototypes > 0:
             fig.suptitle(f'{num_criticisms} Criticisms')
             plt.savefig(output_dir / f'{num_criticisms}_criticisms.svg')
             print('Done.', flush=True)
+
