@@ -1,1 +1,61 @@
 # MMD-critic
+Work-in-progress implementation of 
+
+**Examples are not Enough, Learn to Criticize! Criticism for Interpretability. Been Kim, Rajiv Khanna, Sanmi Koyejo. NeurIPS 2016**
+
+
+## Setup
+### Installing Dependencies
+
+* pytorch
+* scikit-learn
+* matplotlib
+
+Example install using cpu only pytorch:
+```
+conda create -n mmd-critic python=3.8 scikit-learn matplotlib
+conda activate mmd-critic
+conda install -c pytorch pytorch cpuonly 
+```
+
+### Downloading data for the digits example
+```
+mkdir ./data
+wget https://raw.githubusercontent.com/BeenKim/MMD-critic/master/data/usps -P ./data
+wget https://raw.githubusercontent.com/BeenKim/MMD-critic/master/data/usps.t -P ./data
+```
+
+### Run the digits example
+```
+python digits.py
+```
+
+The `digits.py` file contains tunable parameters.
+
+
+<p align="center">
+  <img width="50%" src="examples/32_prototypes.svg"></img>
+</p>
+<p align="center">
+  <img width="50%" src="examples/10_criticisms.svg"></img>
+</p>
+
+
+## Reference
+* Paper: https://proceedings.neurips.cc/paper/2016/hash/5680522b8e2bb01943234bce7bf84534-Abstract.html
+* If you find this code useful for your research, please cite the following:
+    ```
+    @inproceedings{kim2016MMD,
+    title={Examples are not Enough, Learn to Criticize! Criticism for Interpretability},
+    author={Been Kim, Rajiv Khanna and Sanmi Koyejo },
+    booktitle={Advances in Neural Information Processing Systems},
+    year={2016}
+    }
+    ```
+* This code is based on the authors [original Implementation](https://github.com/BeenKim/MMD-critic), consider leaving a :star: on their repository to support authors releasing their code.
+
+
+## To-Do
+* add 1NN classifier
+* add more examples
+
