@@ -39,10 +39,10 @@ python digits.py
 ```
 
 <p align="center">
-  <img width="50%" src="examples/32_prototypes_digits.svg"></img>
+  <img src="examples/32_prototypes_digits.svg"></img>
 </p>
 <p align="center">
-  <img width="50%" src="examples/10_criticisms_digits.svg"></img>
+  <img src="examples/10_criticisms_digits.svg"></img>
 </p>
 
 ### Imagenet example
@@ -56,20 +56,20 @@ Some example plots for `class_name = 'Blenheim spaniel'`
 Using image embeddings (2084 dim) from resnet50
 </p>
 <p align="center">
-  <img width="50%" src="examples/32_prototypes_imagenet_embeddings_Blenheim_spaniel.svg"></img>
+  <img src="examples/32_prototypes_imagenet_embeddings_Blenheim_spaniel.svg"></img>
 </p>
 <p align="center">
-  <img width="50%" src="examples/10_criticisms_imagenet_embeddings_Blenheim_spaniel.svg"></img>
+  <img src="examples/10_criticisms_imagenet_embeddings_Blenheim_spaniel.svg"></img>
 </p>
 
 <p align="center">
 Using raw images (flattened):
 </p>
 <p align="center">
-  <img width="50%" src="examples/32_prototypes_imagenet_Blenheim_spaniel.svg"></img>
+  <img src="examples/32_prototypes_imagenet_Blenheim_spaniel.svg"></img>
 </p>
 <p align="center">
-  <img width="50%" src="examples/10_criticisms_imagenet_Blenheim_spaniel.svg"></img>
+  <img src="examples/10_criticisms_imagenet_Blenheim_spaniel.svg"></img>
 </p>
 
 ## Reference
