@@ -5,13 +5,21 @@ Work-in-progress implementation of
 
 
 ## Setup
+```
+git clone https://github.com/maxidl/MMD-critic.git
+cd MMD-critic
+```
+
 ### Installing Dependencies
 
-* pytorch
-* scikit-learn
+* pytorch (for now everything is run on cpu)
 * matplotlib
+* scikit-learn (for digits only)
+* torchvision (for imagenet only)
+* tqdm (for imagenet only)
 
-Example install using cpu only pytorch:
+
+Example dependency install using conda with cpu only pytorch:
 ```
 conda create -n mmd-critic python=3.8 scikit-learn matplotlib
 conda activate mmd-critic
@@ -25,21 +33,43 @@ wget https://raw.githubusercontent.com/BeenKim/MMD-critic/master/data/usps -P ./
 wget https://raw.githubusercontent.com/BeenKim/MMD-critic/master/data/usps.t -P ./data
 ```
 
-### Run the digits example
+### Digits example
 ```
 python digits.py
 ```
 
-The `digits.py` file contains tunable parameters.
-
-
 <p align="center">
-  <img width="50%" src="examples/32_prototypes.svg"></img>
+  <img width="50%" src="examples/32_prototypes_digits.svg"></img>
 </p>
 <p align="center">
-  <img width="50%" src="examples/10_criticisms.svg"></img>
+  <img width="50%" src="examples/10_criticisms_digits.svg"></img>
 </p>
 
+### Imagenet example
+```
+python imagenet.py
+```
+This example requires the ImageNet dataset. Make sure to set `imagenet_root` inside of `imagenet.py`.
+
+<p align="center">
+Using image embeddings (2084 dim) from resnet50
+</p>
+<p align="center">
+  <img width="50%" src="examples/32_prototypes_imagenet_embeddings_Blenheim_spaniel.svg"></img>
+</p>
+<p align="center">
+  <img width="50%" src="examples/10_criticisms_imagenet_embeddings_Blenheim_spaniel.svg"></img>
+</p>
+
+<p align="center">
+Using raw images (flattened):
+</p>
+<p align="center">
+  <img width="50%" src="examples/32_prototypes_imagenet_Blenheim_spaniel.svg"></img>
+</p>
+<p align="center">
+  <img width="50%" src="examples/10_criticisms_imagenet_Blenheim_spaniel.svg"></img>
+</p>
 
 ## Reference
 * Paper: https://proceedings.neurips.cc/paper/2016/hash/5680522b8e2bb01943234bce7bf84534-Abstract.html

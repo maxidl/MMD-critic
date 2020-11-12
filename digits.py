@@ -31,9 +31,9 @@ make_plots = True
 print('==============')
 print(f'data_dir:{data_dir.absolute()}')
 print(f'output_dir:{output_dir.absolute()}')
-print(f'gamma:{gamma}')
 print(f'num_prototypes:{num_prototypes}')
 print(f'num_criticisms:{num_criticisms}')
+print(f'gamma:{gamma}')
 print(f'kernel_type:{kernel_type}')
 print(f'regularizer:{regularizer}')
 print(f'make_plots:{make_plots}')
@@ -54,7 +54,7 @@ def load_data(fname):
     return X, y
 
 
-print('Preparing data...', end='')
+print('Preparing data...', end='', flush=True)
 X_train, y_train = load_data('usps')
 X_test, y_test = load_data('usps.t')
 y_train -= 1
@@ -67,7 +67,7 @@ elif kernel_type == 'local':
     d_train.compute_local_rbf_kernel(gamma)
 else:
     raise KeyError('kernel_type must be either "global" or "local"')
-print('Done.')
+print('Done.', flush=True)
 
 # Prototypes
 if num_prototypes > 0:
@@ -96,7 +96,7 @@ if num_prototypes > 0:
             axis.imshow(prototypes_sorted[i].view(16,16).numpy(), cmap='gray')
             axis.axis('off')
         fig.suptitle(f'{num_prototypes} Prototypes')
-        plt.savefig(output_dir / f'{num_prototypes}_prototypes.svg')
+        plt.savefig(output_dir / f'{num_prototypes}_prototypes_digits.svg')
         print('Done.', flush=True)
 
     # Criticisms
@@ -126,6 +126,6 @@ if num_prototypes > 0:
                 axis.imshow(criticisms_sorted[i].view(16,16).numpy(), cmap='gray')
                 axis.axis('off')
             fig.suptitle(f'{num_criticisms} Criticisms')
-            plt.savefig(output_dir / f'{num_criticisms}_criticisms.svg')
+            plt.savefig(output_dir / f'{num_criticisms}_criticisms_digits.svg')
             print('Done.', flush=True)
 
