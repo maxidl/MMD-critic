@@ -51,6 +51,7 @@ python imagenet.py
 ```
 This example requires the ImageNet dataset. Make sure to set `imagenet_root` inside of `imagenet.py`.
 
+Some example plots for `class_name = 'Blenheim spaniel'`
 <p align="center">
 Using image embeddings (2084 dim) from resnet50
 </p>
